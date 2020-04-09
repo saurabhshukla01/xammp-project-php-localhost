@@ -1,0 +1,42 @@
+database create online food :
+
+create database :
+ofos
+
+sql command : 
+$ create database `ofos`;
+
+create table :
+admin                           fields :   (`id`, `un`, `ps`)
+order_booking					fields :   (`id`, `type`, `pname`, `price`, `cname`, `email`, 												`mno`, `address`, `city`)
+
+product							fields :    (`id`, `name`, `price`)
+
+
+Sql command : 
+
+$ INSERT INTO `admin`(`id`, `un`, `ps`) VALUES ([value-1],[value-2],[value-3]);
+
+$ INSERT INTO `order_booking`(`id`, `type`, `pname`, `price`, `cname`, `email`, `mno`, `address`, `city`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9]);
+
+
+$ INSERT INTO `product`(`id`, `name`, `price`) VALUES ([value-1],[value-2],[value-3]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================
+

@@ -1,0 +1,80 @@
+<fieldset id="contact_form">
+ <div id="result"></div>
+ <label for="email"><span>Email : *</span>
+   <input type="email" name="email" id="email"  />
+ </label>
+ <label for="message"><span>Message : *</span>
+   <textarea name="message" id="message" ></textarea>
+ </label>
+ <label>
+   <button class="submit_btn" id="submit_btn">Envoyer</button>
+ </label>
+</fieldset>
+
+
+------------------------------------------------------------------------------
+
+
+
+$(document).ready(function() {
+$("#submit_btn").click(function() {
+var user_email      = $('input[name=email]').val();
+var user_message    = $('textarea[name=message]').val();
+if(proceed)
+{
+var post_data = new FormData();
+post_data.append( 'userEmail', user_email );
+post_data.append( 'userMessage',user_message);
+$.ajax({
+   url: 'contactus.php',
+   data: post_data,
+   processData: false,
+   contentType: false,
+   type: 'POST',
+   dataType:'json',
+   success: function(data){
+   if(data.type == 'error')
+     {
+     output = '<div class="error">'+data.text+'</div>';
+     }else{
+     output = '<div class="success">'+data.text+'</div>';
+     }
+    }
+  });
+ }
+ });
+});
+
+
+
+-----------------------------------------------------------------------------------------
+
+# contact.php --
+
+include ("connexion.php");
+if($_POST)
+{
+// SAVE DATA
+$sql = 'INSERT INTO historique_contact VALUES ("", "tibo", "message")';
+mysql_query ($sql) or die ('Erreur SQL !'.$sql.'<br />'.mysql_error());
+// SEND DATA
+$to     = "mail@gmail.com"; 
+$from   = $_POST["userEmail"]; 
+$subject        = 'Contact'; 
+$user_Email       = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
+$user_Message     = filter_var($_POST["userMessage"], FILTER_SANITIZE_STRING);
+$mail_body       .="Email:".$user_Email;
+$mail_body       .="Message:".$user_Message; 
+$headers =  'From: '.$from_Email.'' . "\r\n" .
+            'Content-Type: text/html; charset="UTF-8"';
+            'X-Mailer: PHP/' . phpversion();
+$sentMail = mail($to_Email, $subject, $mail_body, $headers);
+if(!$sentMail) //output success or failure messages
+{
+    $output = json_encode(array('type'=>'error', 'text' => 'Error...'));
+    die($output);
+}else{
+    $output = json_encode(array('type'=>'message', 'text' => 'Success'));
+    die($output);
+}
+}

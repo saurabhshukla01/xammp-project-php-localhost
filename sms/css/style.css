@@ -1,0 +1,246 @@
+body{
+     background-color: #COC;
+}
+
+header nav ul li {
+    border:1px;
+    display: inline;
+}
+
+header{
+    background-color: #000;
+    color:white;
+    margin-left: 0px;
+    height: 50px;
+}
+
+#title{
+    background-color: #ccc;
+    text-align: center;
+    font-size: 16px;
+    font-family: cursive;
+    color:blue;
+}
+
+#dash {
+    background-color: #00ff00;
+    color:white;
+    padding:10px;
+    font-family:cursive;
+    font-weight:bold;
+    font-size:20px;
+}
+
+#home table tr td {
+    margin:10px 10px;
+    padding:10px;
+    font-family:cursive;
+    font-weight:bold;
+    font-size:20px;
+}
+
+#addstudent table {
+    margin-top: 5%;
+    margin-left:15%;
+    padding: 10px;
+    text-align: center;
+    width:70%;
+    color:black;
+    border:1px;
+}
+
+#addstudent table th {
+    background-color: blue;
+    text-align: center;
+    width:60%;
+    color:black;
+    font-size: 20px;
+}
+
+#addstudent table tr {
+    text-align:center;
+    width:60%;
+    color:black;
+    font-size: 20px;
+}
+
+#addstudent table tr input{
+    background-color:blue;
+    width:100%;
+    color:white;
+
+}
+#addstudent table td {
+    text-align: center;
+    width:60%;
+    color:black;
+}
+
+#showstudent  thead tr th {
+    font-size: 20px;
+    font-family: cursive;
+    background-color: blue;
+    color:white;
+}
+
+#updatestudent .filter{
+    background-color: #C0C;
+    font-size: 16px;
+}
+
+#updatestudent h3{
+    font-size: 30px;
+    margin-left:20%;
+    padding:10px;
+}
+
+#updatestudent .filter th{
+    font-size: 16px;
+    margin:10px;
+    padding:10px;
+    text-align: center;
+}
+
+#updatestudent .filter input{
+    font-size: 14px;
+    margin:10px;
+    padding:8px;
+    color:blue;
+    width:200px;
+    text-align: center;
+}
+
+#updatestudent .filter .sub{
+    font-size: 14px;
+    margin-left:5px;
+    padding:8px;
+    color:#C0C;
+    width:100px;
+    text-align: center;
+}
+
+#updatestudent .filtertable table th tr td{
+    border: 2px;
+    max-height: 10px;
+} 
+
+#updatestudent .filtertable{
+    background-color: #C0C;
+    font-size: 16px;
+}
+
+#updatestudent .filtertable thead th{
+    font-size: 16px;
+    margin:0px auto;
+    padding:8px;
+    text-align: center;
+}
+
+#updatestudent .filtertable tbody tr{
+    font-size: 16px;
+    margin:0px auto;
+    padding:8px;
+    color:#fff;
+    text-align: center;
+    line-height: 10px;
+}
+
+
+#updateform table {
+    margin-top: 5%;
+    margin-left:15%;
+    padding: 10px;
+    text-align: center;
+    width:70%;
+    color:black;
+    border:1px;
+}
+
+#updateform table th {
+    background-color: blue;
+    text-align: center;
+    width:60%;
+    color:black;
+    font-size: 20px;
+}
+
+#updateform table tr {
+    text-align:center;
+    width:60%;
+    color:black;
+    font-size: 20px;
+}
+
+#updateform table tr input{
+    background-color:blue;
+    width:100%;
+    color:white;
+
+}
+#updateform table td {
+    text-align: center;
+    width:60%;
+    color:black;
+}
+
+#deletestudent .filter{
+    background-color: #C0C;
+    font-size: 16px;
+}
+
+#deletestudent h3{
+    font-size: 30px;
+    margin-left:20%;
+    padding:10px;
+}
+
+#deletestudent .filter th{
+    font-size: 16px;
+    margin:10px;
+    padding:10px;
+    text-align: center;
+}
+
+#deletestudent .filter input{
+    font-size: 14px;
+    margin:10px;
+    padding:8px;
+    color:blue;
+    width:200px;
+    text-align: center;
+}
+
+#deletestudent .filter .sub{
+    font-size: 14px;
+    margin-left:5px;
+    padding:8px;
+    color:#C0C;
+    width:100px;
+    text-align: center;
+}
+
+#deletestudent .filtertable table th tr td{
+    border: 2px;
+    max-height: 10px;
+} 
+
+#deletestudent .filtertable{
+    background-color: #C0C;
+    font-size: 16px;
+}
+
+#deletestudent .filtertable thead th{
+    font-size: 16px;
+    margin:0px auto;
+    padding:8px;
+    text-align: center;
+}
+
+#deletestudent .filtertable tbody tr{
+    font-size: 16px;
+    margin:0px auto;
+    padding:8px;
+    color:#fff;
+    text-align: center;
+    line-height: 10px;
+}

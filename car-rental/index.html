@@ -1,0 +1,939 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Index</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--<link href="css/font-awesome.min.css" rel="stylesheet">-->
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+<link rel="stylesheet" href="css/jquery.select.css"/>
+
+<link rel="stylesheet" id="rangecalendar-style-css" href="css/rangecalendar.css" type="text/css" media="all">
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css"> 
+</head>
+<body>
+
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href=""><img src="images/logo.png" alt="" class="img-fluid" style="width:200px;"></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+		<section class="banner-area">
+
+			<div id="carouselExampleSlidesOnly" class="carousel fade-carousel carousel-fade slide" data-ride="carousel" data-interval="2000" id="bs-carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img class="d-block w-100" src="images/hero-banner.jpg" alt="First slide">
+				  </div>
+				  <div class="carousel-item">
+					<img class="d-block w-100" src="images/hero-banner1.jpg" alt="Second slide">
+				  </div>
+				  <div class="carousel-item">
+					<img class="d-block w-100" src="images/hero-banner2.jpg" alt="Third slide">
+				  </div>
+				  <div class="carousel-item">
+					<img class="d-block w-100" src="images/hero-banner3.jpg" alt="Third slide">
+				  </div>
+				</div>
+			  </div>
+			<div class="overlay-banner">
+				&nbsp;
+			</div>
+			<div class="banner-content-text">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 banner-content-left text-white mr-5 pr-5">
+							<h6 class="font-weight-light">THE ROYAL ESSENCE OF JOURNEY</h6>
+							<h1>RELAXED JOURNEY EVER</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<span Class="btn theme-color">Rent a Car Now</span>
+						</div>
+						<div class="col-md-12 banner-content-right text-white pull-right">
+							<form id="regForm" action="">
+								<!-- One "tab" for each step in the form: -->
+								<div class="tab">
+						<h4 class="pb-2 font-weight-light">Book your Car Today!!!</h4>
+						
+									<div class="row">
+										<div class="col-md-4"><p><input placeholder="First name..." oninput="this.className = 'form-control'" name="fname" class="form-control"></p></div>
+									<div class="col-md-4"><input placeholder="Last name..." oninput="this.className = 'form-control'" name="lname" class="form-control"></div>
+									<div class="col-md-4">
+										<select class="form-control" id="select-car">
+									<option aria-readonly="true" selected>Select Your Car</option>
+									<option>Car 1</option>
+									<option>Car 2</option>
+									<option>Car 3</option>
+									<option>Car 4</option>
+									<option>Car 5</option>
+									<option>Car 6</option>
+									<option>Car 7</option>
+								</select></div>
+									</div>
+								
+								</div>
+								<div class="tab">
+									<h4 class="pb-2 font-weight-light">Select your Pick & Drop Date</h4>
+									<td id="c11" class="container"></td>
+									<td class="result"></td>
+									<div id="cal5"></div>
+									<div class="calendar-values row">
+										<div class="col col-md-4 start-date"> <span class="title">Pick Date: </span> <span class="value text-color"></span> <span class="label text-color"></span> </div>
+										<div class="col col-md-4 end-date"> <span class="title">Drop Date: </span> <span class="value text-color"></span> <span class="label text-color"></span> </div>
+										<div class="col col-md-4 col days-width last"> <span class="title">Total Days: </span> <span class="value text-color"></span> <span class="label text-color">Days</span> </div>
+									</div>
+								</div>
+								<div class="tab">
+									<div class="row">
+										<div class="form-group col-md-6">
+									<h4 class="pb-2 font-weight-light">Tell us your Starting Point</h4>
+									<select id="selectbox1" class="form-control ">
+										<option value="">Select City&hellip;</option>
+										<option value="aye">Delhi / NCR</option>
+										<option value="eh">Delhi / NCR</option>
+										<option value="ooh">Delhi / NCR</option>
+										<option value="whoop">Delhi / NCR</option>
+									</select>
+									<input placeholder="Tell Us Your Starting Point in Delhi / NCR" oninput="this.className = 'form-control w-85'" name="nn" class="w-85 form-control float-left">
+									<div class="search-sugg">
+										<span class="search-sugg-heading">POPULAR PICK-UP POINTS: </span>
+										<span>Mahipalpur, </span>
+										<span>East of Kailash, </span>
+										<span>Laxmi Nagar, </span>
+										<span>Mayur Vihar Extension, </span>
+										<span>Gurgaon</span>
+									</div>
+									</div>
+									<div class="form-group col-md-6">
+										<h4 class="pb-2 font-weight-light">Tell us your Destination Point</h4>
+										<select id="selectbox2" class="form-control ">
+											<option value="">Select City&hellip;</option>
+											<option value="aye">Delhi / NCR</option>
+											<option value="eh">Delhi / NCR</option>
+											<option value="ooh">Delhi / NCR</option>
+											<option value="whoop">Delhi / NCR</option>
+										</select>
+										<input placeholder="Tell Us Your Starting Point in Delhi / NCR" oninput="this.className = 'form-control w-85'" name="nn" class="w-85 form-control float-left">
+										</div>
+									</div>
+								<!--
+								<p><input placeholder="yyyy" oninput="this.className = 'form-control'" name="yyyy" class="form-control"></p>-->
+								</div>
+								<div class="tab">Login Info:
+								<p><input placeholder="Username..." oninput="this.className = 'form-control'" name="uname" class="form-control"></p>
+								<p><input placeholder="Password..." oninput="this.className = 'form-control'" name="pword" type="password" class="form-control"></p>
+								</div>
+								<div style="overflow:auto;">
+								<div style="float:right;">
+									<button type="button" id="nextBtn" onclick="nextPrev(1)" class="form-control theme-color text-white" style="float: right; width: 130px;">Book Now</button>
+									<button type="button" id="prevBtn" onclick="nextPrev(-1)" class="form-control theme-color text-white" style="float: right;width: 130px; margin-right: 5px;">Previous</button>
+								</div>
+								</div>
+								<!-- Circles which indicates the steps of the form: -->
+								<div style="text-align:center;margin-top:40px; visibility: hidden; display: none;">
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+								</div>
+							</form>
+  
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="" class="howitworks services pt-5 bg-light">
+			<div class="container p-5 position-relative">
+				  <div class="row text-center work-heading">
+						<h4 class="m-0 d-block w-100">HOW IT WORKS?</h4>
+						<span class="position-relative d-block w-100">First Ever AI Based Marketing Platform With Customized Solutions</span>
+					 </div>
+				  <div class="row p-5">
+						<div class="col-md-3 pb-3 work-circle text-center">
+							  <i class="fa fa-dot-circle-o fa-2x mt-5 mb-3"></i>
+							  <div class="">
+									<h6 class="m-0 font-weight-light">APPLY THE APP</h6>
+									<small class="text-secondary font-weight-light line-height d-inline-block mt-2 mb-2">Our company has its own app for the customers comfort usage.</small>
+							  </div>
+						</div>
+						<div class="col-md-3 pb-3 work-circle text-center">
+							  <i class="fa fa-wpexplorer fa-2x mt-5 mb-3"></i>
+							  <div class="">
+									<h6 class="m-0 font-weight-light">CHOOSE A CAR</h6>
+									<small class="text-secondary font-weight-light line-height d-inline-block mt-2 mb-2">Book any car for just an hour or full 7 days, with no limitation.</small>
+							  </div>
+						</div>
+						<div class="col-md-3 pb-3 work-circle text-center">
+							  <i class="fa fa-braille fa-2x mt-5 mb-3"></i>
+							  <div class="">
+								 <h6 class="m-0 font-weight-light">PICK UP A CARD</h6>
+								 <small class="text-secondary font-weight-light line-height d-inline-block mt-2 mb-2">Our cards are easy to use: hold it ot the windshield, or tap the app. </small>
+							  </div>
+						</div>
+						<div class="col-md-3 pb-3 work-circle text-center">
+							  <i class="fa fa-line-chart fa-2x mt-5 mb-3"></i>
+							  <div class="">
+									<h6 class="m-0 font-weight-light">ENJOY DRIVING</h6>
+									<small class="text-secondary font-weight-light line-height d-inline-block mt-2 mb-2">Our app gives you the opportunity to quickly.</small>
+							  </div>
+						</div>
+					 </div>
+			</div>
+		 </section>
+
+
+		 <section class="large-network">
+			 <div class="">
+				 <div class="row mr-0 ml-0">
+					 <div class="col-md-6 about-us">&nbsp;
+						<!--<div id="carouselExampleSlidesOnly" class="carousel fade-carousel carousel-fade slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+							<div class="carousel-inner">
+							  <div class="carousel-item active">
+								<img class="d-block w-100" src="images/hero-banner.jpg" alt="First slide">
+							  </div>
+							  <div class="carousel-item">
+								<img class="d-block w-100" src="images/hero-banner1.jpg" alt="Second slide">
+							  </div>
+							  <div class="carousel-item">
+								<img class="d-block w-100" src="images/hero-banner2.jpg" alt="Third slide">
+							  </div>
+							  <div class="carousel-item">
+								<img class="d-block w-100" src="images/hero-banner3.jpg" alt="Third slide">
+							  </div>
+							</div>
+						  </div>-->
+					 </div>
+					 <div class="col-md-6 blank-div p-5">
+						<h4 class="pt-5 ml-5">Globally Connected by Large Network</h4>
+								<h6 class="ml-5"><small> are here to listen from you deliver exellence</small></h6>
+							   <p class="pr-5 mr-5 ml-5">sbdfgdsjfbhsdf usvf fyugfds fdsyufgsf sdfygsuf dsyfgsd fsdfgsd fsgf sdfgsd fgsd fdsugf sdugfs dfsudf sdugfuewrhr weieweugf fgufg fedfugefb erqfgef efwgf wefgfb wfgf wfugf fwfgwef wefuwegf uwegf</p>
+							   <span class="btn mb-5 ml-5 theme-color text-white">Get Details</span>
+						
+					 </div>
+				 </div>
+			 </div>
+		 </section>
+
+<section class="pt-5 pb-5 bg-light our-services">
+	<div class="container pt-5 pb-5 position-relative">
+		<div class="row text-center work-heading pb-5">
+			<h4 class="m-0 d-block w-100">Our Services</h4>
+			<span class="position-relative d-block w-100 mb-5">First Ever AI Based Marketing Platform With Customized Solutions</span>
+		 </div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="text-right pb-5">
+					<i class="fa fa-braille fa-2x theme-text-color"></i>
+					<h6 class="">Pickup & delivery</h6>
+					<p>Mus accumsan venenatis hac curabitur per quis parturient vel ut a sit a socii.</p>
+				</div>
+				<div class="text-right pb-5">
+					<i class="fa fa-braille fa-2x theme-text-color"></i>
+					<h6 class="">Personal driver</h6>
+					<p>Mus accumsan venenatis hac curabitur per quis parturient vel ut a sit a socii.</p>
+				</div>
+			</div>
+			<div class="col-md-6 p-5">
+				<div id="carouselExampleSlidesOnly11" class="carousel fade-carousel carousel-fade slide" data-ride="carousel" data-interval="4000" id="bs-carousel" style="height: 303px; overflow: hidden;">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleSlidesOnly11" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleSlidesOnly11" data-slide-to="1"></li>
+					<li data-target="#carouselExampleSlidesOnly11" data-slide-to="2"></li>
+					<li data-target="#carouselExampleSlidesOnly11" data-slide-to="3"></li>
+				  </ol>
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<img class="d-block w-100" src="images/short-banner.png" alt="First slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block w-100" src="images/short-banner1.png" alt="Second slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block w-100" src="images/short-banner2.png" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block w-100" src="images/short-banner1.png" alt="Fourth slide">
+					  </div>
+					</div>
+				  </div>
+			</div>
+			<div class="col-md-3">
+				<div class="text-left pb-5">
+					<i class="fa fa-braille fa-2x theme-text-color"></i>
+					<h6 class="">Fuel plans</h6>
+					<p>Mus accumsan venenatis hac curabitur per quis parturient vel ut a sit a socii.</p>
+				</div>
+				<div class="text-left pb-5">
+					<i class="fa fa-braille fa-2x theme-text-color"></i>
+					<h6 class="">Car navigation</h6>
+					<p>Mus accumsan venenatis hac curabitur per quis parturient vel ut a sit a socii.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container position-relative">
+		<div class="row text-center work-heading pt-5 pb-2">
+			<h4 class="m-0 d-block w-100">Find a Perfect Car</h4>
+			<span class="position-relative d-block w-100">First Ever AI Based Marketing Platform With Customized Solutions</span>
+		 </div>
+		<div class="row">
+		  <div class="cta filter">
+			<a class="all active text-center" data-filter="all" href="#" role="button">Show All</a>
+			<a class="suv-filter" data-filter="suv" href="#" role="button">SUV</a>
+			<a class="sedan-filter" data-filter="sedan" href="#" role="button">SEDAN</a>
+			<a class="mvp-filter" data-filter="mvp" href="#" role="button">MVP</a>
+			<a class="hatchback-filter" data-filter="hatchback" href="#" role="button">HATCHBACK</a>
+			<a class="convertible-filter" data-filter="convertible" href="#" role="button">CONVERTIBLE</a>
+		  </div>
+		  
+		  <div class="boxes">
+			<div class="suv box-content" data-category="suv" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner.png" alt=""></a>
+					  <div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			<div class="sedan box-content" data-category="sedan" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner1.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="mvp box-content" data-category="mvp" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner2.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="hatchback box-content" data-category="hatchback" href="#">
+			<div class="thumbnail">
+				<a href=""><img src="images/short-banner3.png" alt=""></a>
+				<div class="caption">
+					<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+					<small class="text-secondary">(Sedan)</small>
+					<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+					<p>
+						<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+						<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+						<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+					</p>
+				</div>
+			</div>
+			</div>
+		
+			<div class="convertible box-content" data-category="convertible" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner4.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="suv box-content" data-category="suv" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner5.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="sedan box-content" data-category="sedan" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner6.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="mvp box-content" data-category="mvp" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner7.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="hatchback box-content" data-category="hatchback" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+			
+			<div class="convertible box-content" data-category="convertible" href="#">
+				<div class="thumbnail">
+					<a href=""><img src="images/short-banner1.png" alt=""></a>
+					<div class="caption">
+						<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+						<small class="text-secondary">(Sedan)</small>
+						<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+						<p>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+							<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+						</p>
+					</div>
+				  </div>
+				</div>
+				<div class="hatchback box-content" data-category="hatchback" href="#">
+					<div class="thumbnail">
+						<a href=""><img src="images/short-banner.png" alt=""></a>
+						<div class="caption">
+							<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+							<small class="text-secondary">(Sedan)</small>
+							<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+							<p>
+								<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+								<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+								<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+							</p>
+						</div>
+					  </div>
+					</div>
+				
+				<div class="convertible box-content" data-category="convertible" href="#">
+					<div class="thumbnail">
+						<a href=""><img src="images/short-banner1.png" alt=""></a>
+						<div class="caption">
+							<h6 class="mt-3 d-inline-block"><a href="">Honda Civic</a></h6>
+							<small class="text-secondary">(Sedan)</small>
+							<span class="float-right mt-2"><small class="theme-text-color font-weight-bold"><i class="fa fa-inr" aria-hidden="true"></i> 2,000/Day</small class="theme-text-color"></span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+							<p>
+								<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="label"><small>2015</small></span>
+								<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AUTOMATIC</small></span>
+								<span class="btn-xs p-1 pl-2 pr-2 text-secondary border" role="button"><small>AIR CONDITION</small></span>
+							</p>
+						</div>
+					  </div>
+					</div>
+			</div>
+		  </div>
+		  </div>
+	</div>
+</section>
+
+<section class="bg-light top-destinations">
+	<div class="container position-relative">
+		<div class="row text-center work-heading pt-5 pb-5">
+			<h4 class="m-0 d-block w-100">Top destinations</h4>
+			<span class="position-relative d-block w-100 mb-5">Choose from thousands of cars in over 5,500 cities across the US, Canada, Germany, and the UK.</span>
+		 </div>
+		<div class="row">
+			<div id="destination" class="owl-carousel owl-theme">
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/delhi.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Delhi</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/mumbai.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Mumbai</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/rajasthan.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Rajasthan</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/bangalore.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Bangalore</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/chennai.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Chennai</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/agra.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Agra</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/punjab.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Punjab</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/hyderabad.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Hyderabad</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/lucknow.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Lucknow</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+				
+				<div class="item">
+					<div class="thumbnail">
+						<a href=""><img src="images/kolkata.png" alt=""></a>
+						  <div class="caption text-center">
+							<h6 class="mt-3 d-inline-block"><a href="">Kolkata</a></h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta</p>
+						</div>
+					  </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="mortymobile">
+	<div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="images/video1.mp4" type="video/mp4">
+  </video>
+  <div class="row mr-0 ml-0">
+    <div class="col-md-6 p-0">
+		<div class="box text-center p-5 m-5">
+			<div class="w-100 text-white">
+			  <i class="fa fa-wpexplorer fa-2x mt-5 mb-3"></i>
+			  <h3 class="font-weight-light">Lorem ipsum dolor sit amet</h3>
+			  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit.</p>
+			</div>
+		  </div>
+	</div>
+	<div class="col-md-6 p-0">
+		<div class="box text-center p-5 m-5">
+			<div class="w-100 text-white">
+			  <i class="fa fa-wpexplorer fa-2x mt-5 mb-3"></i>
+			  <h3 class="font-weight-light">Book, unlock, and go!</h3>
+			  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit.</p>
+			</div>
+		  </div>
+	</div>
+  </div>
+</section>
+
+
+<section class="bg-light testimonial">
+	<div class="container position-relative">
+		<div class="row text-center work-heading pt-5 pb-5">
+			<h4 class="m-0 d-block w-100">What hosts are saying</h4>
+			<span class="position-relative d-block w-100 mb-5">Choose from thousands of cars in over 5,500 cities across the US, Canada, Germany, and the UK.</span>
+		 </div>
+		<div class="row">
+			<div id="testimonials" class="owl-carousel owl-theme">
+				<div class="item">
+					<div class="row">
+						<div class="col-md-6 testimonials-image1">&nbsp;</div>
+						<div class="col-md-6 blank-div p-5">
+						   <!--<h4 class="pt-5 ml-5">Globally Connected by Large Network</h4>-->
+								  <p class="testimonials-content pt-4 pr-5 mt-5 mr-5 ml-5">sbdfgdsjfbhsdf usvf fyugfds fdsyufgsf sdfygsuf dsyfgsd fsdfgsd fsgf sdfgsd fgsd fdsugf sdugfs dfsudf sdugfuewrhr weieweugf fgufg fedfugefb erqfgef efwgf wefgfb wfgf wfugf fwfgwef wefuwegf uwegf</p>
+								  <span class="mb-5 ml-5 theme-text-color">Natasha</span>
+								  <h6 class="ml-5"><small> (Director)</small></h6>
+						   
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-md-6 testimonials-image2">&nbsp;</div>
+						<div class="col-md-6 blank-div p-5">
+							<!--<h4 class="pt-5 ml-5">Globally Connected by Large Network</h4>-->
+								   <p class="testimonials-content pt-4 pr-5 mt-5 mr-5 ml-5">sbdfgdsjfbhsdf usvf fyugfds fdsyufgsf sdfygsuf dsyfgsd fsdfgsd fsgf sdfgsd fgsd fdsugf sdugfs dfsudf sdugfuewrhr weieweugf fgufg fedfugefb erqfgef efwgf wefgfb wfgf wfugf fwfgwef wefuwegf uwegf</p>
+								   <span class="mb-5 ml-5 theme-text-color">Natasha</span>
+								   <h6 class="ml-5"><small> (Director)</small></h6>
+							
+						 </div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-md-6 testimonials-image3">&nbsp;</div>
+						<div class="col-md-6 blank-div p-5">
+							<!--<h4 class="pt-5 ml-5">Globally Connected by Large Network</h4>-->
+								   <p class="testimonials-content pt-4 pr-5 mt-5 mr-5 ml-5">sbdfgdsjfbhsdf usvf fyugfds fdsyufgsf sdfygsuf dsyfgsd fsdfgsd fsgf sdfgsd fgsd fdsugf sdugfs dfsudf sdugfuewrhr weieweugf fgufg fedfugefb erqfgef efwgf wefgfb wfgf wfugf fwfgwef wefuwegf uwegf</p>
+								   <span class="mb-5 ml-5 theme-text-color">Natasha</span>
+								   <h6 class="ml-5"><small> (Director)</small></h6>
+							
+						 </div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-md-6 testimonials-image4">&nbsp;</div>
+						<div class="col-md-6 blank-div p-5">
+							<!--<h4 class="pt-5 ml-5">Globally Connected by Large Network</h4>-->
+								   <p class="testimonials-content pt-4 pr-5 mt-5 mr-5 ml-5">sbdfgdsjfbhsdf usvf fyugfds fdsyufgsf sdfygsuf dsyfgsd fsdfgsd fsgf sdfgsd fgsd fdsugf sdugfs dfsudf sdugfuewrhr weieweugf fgufg fedfugefb erqfgef efwgf wefgfb wfgf wfugf fwfgwef wefuwegf uwegf</p>
+								   <span class="mb-5 ml-5 theme-text-color">Natasha</span>
+								   <h6 class="ml-5"><small> (Director)</small></h6>
+							
+						 </div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-md-6 testimonials-image5">&nbsp;</div>
+						<div class="col-md-6 blank-div p-5">
+							<!--<h4 class="pt-5 ml-5">Globally Connected by Large Network</h4>-->
+								   <p class="testimonials-content pt-4 pr-5 mt-5 mr-5 ml-5">sbdfgdsjfbhsdf usvf fyugfds fdsyufgsf sdfygsuf dsyfgsd fsdfgsd fsgf sdfgsd fgsd fdsugf sdugfs dfsudf sdugfuewrhr weieweugf fgufg fedfugefb erqfgef efwgf wefgfb wfgf wfugf fwfgwef wefuwegf uwegf</p>
+								   <span class="mb-5 ml-5 theme-text-color">Natasha</span>
+								   <h6 class="ml-5"><small> (Director)</small></h6>
+							
+						 </div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+        <!--footer-->
+		<footer class="kilimanjaro_area">
+			<!-- Top Footer Area Start -->
+			<div class="foo_top_header_one section_padding_100_70">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="kilimanjaro_part">
+								<h5>About Us</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit.</p>
+							</div>
+							<div class="kilimanjaro_part m-top-15">
+								<h5>Social Links</h5>
+								<ul class="kilimanjaro_social_links">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> </a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> </a></li>
+									<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> </a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="kilimanjaro_part">
+								<h5>Tags Widget</h5>
+								<ul class=" kilimanjaro_widget">
+									<li><a href="#">Classy</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Creative</a></li>
+									<li><a href="#">One Page</a></li>
+									<li><a href="#">Multipurpose</a></li>
+									<li><a href="#">Minimal</a></li>
+									<li><a href="#">Classic</a></li>
+									<li><a href="#">Medical</a></li>
+								</ul>
+							</div>
+	
+							<div class="kilimanjaro_part m-top-15">
+								<h5>Important Links</h5>
+								<ul class="kilimanjaro_links">
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms & Conditions</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>About Licences</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Help & Support</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Careers</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Privacy Policy</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Community & Forum</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="kilimanjaro_part">
+								<h5>Latest News</h5>
+								<div class="kilimanjaro_blog_area">
+									<div class="kilimanjaro_thumb">
+									<img class="img-fluid" src="images/short-banner.png" alt="">
+	
+									</div>
+									<a href="#">Lorem Ipsum</a>
+									<p class="kilimanjaro_date">20 Jan 2020</p>
+									<p>Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+								<div class="kilimanjaro_blog_area">
+									<div class="kilimanjaro_thumb">
+									<img class="img-fluid" src="images/short-banner1.png" alt="">
+									</div>
+									<a href="#">Lorem Ipsum</a>
+									<p class="kilimanjaro_date">20 Jan 2020</p>
+									<p>Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+								<div class="kilimanjaro_blog_area">
+									<div class="kilimanjaro_thumb">
+									<img class="img-fluid" src="images/short-banner2.png" alt="">
+									</div>
+									<a href="#">Lorem Ipsum</a>
+									<p class="kilimanjaro_date">20 Jan 2020</p>
+									<p>Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="kilimanjaro_part">
+								<h5>Quick Contact</h5>
+								<div class="kilimanjaro_single_contact_info">
+									<h5>Phone:</h5>
+									<p>+91 0000 0000 40 <br> +91 0000 0000 00</p>
+								</div>
+								<div class="kilimanjaro_single_contact_info">
+									<h5>Email:</h5>
+									<p>support@aaaa.com <br> aaaa@aaaa.com</p>
+								</div>
+							</div>
+							<div class="kilimanjaro_part">
+								<h5>Latest Works</h5>
+								<div class="kilimanjaro_works">
+									<a class="kilimanjaro_works_img" href="images/short-banner.png"><img src="images/short-banner.png" alt=""></a>
+									<a class="kilimanjaro_works_img" href="images/short-banner1.png"><img src="images/short-banner1.png" alt=""></a>
+									<a class="kilimanjaro_works_img" href="images/short-banner2.png"><img src="images/short-banner2.png" alt=""></a>
+									<a class="kilimanjaro_works_img" href="images/short-banner3.png"><img src="images/short-banner3.png" alt=""></a>
+									<a class="kilimanjaro_works_img" href="images/short-banner4.png"><img src="images/short-banner4.png" alt=""></a>
+									<a class="kilimanjaro_works_img" href="images/short-banner5.png"><img src="images/short-banner5.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Bottom Area Start -->
+			<div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<p>© All Rights Reserved by <a href="#">aaa.com <i class="fa fa-heart-o"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment-with-langs.min.js"></script>
+<script type="text/javascript" src="js/jquery.rangecalendar.js"></script>
+<script>
+
+</script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script type="application/javascript" src="js/jquery.select.js"></script>
+<script src="js/jquery.datetimepicker.full.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+	<script>
+	$(window).scroll(function() {
+    if ($(this).scrollTop() > 150){  
+        $('header').addClass("sticky");
+    }
+    else{
+        $('header').removeClass("sticky");
+    }
+});
+$('.datetimepicker_dark').datetimepicker({theme:'dark',  minDate:'0d' })
+
+$('#destination').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+$('#testimonials').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+</script>
+ <script>
+	$(function () {
+		$("#select-car").select();
+	});
+</script>
+
+</body>
+</html>

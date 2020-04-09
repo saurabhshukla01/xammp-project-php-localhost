@@ -1,0 +1,79 @@
+os:
+  - linux
+
+dist: xenial
+
+language: php
+
+php:
+  - '7.2'
+  - '7.3'
+  - '7.4snapshot'
+#  - nightly
+env:
+  - TRAVIS_COMPOSER_DEV=yes
+  - TRAVIS_COMPOSER_DEV=no
+
+matrix:
+  allow_failures:
+    - php: 7.4snapshot
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.php-cs-fixer
+    - $HOME/.local
+services:
+  - postgresql
+
+addons:
+  mariadb: '10.3'
+  apt:
+    packages:
+      - php-pecl-http
+      - php-imagick
+      - php-mbstring
+      - php-json
+      - php-gd
+
+before_script:
+  - printf "\n" | pecl install imagick
+  # Install ExifTool
+  - wget http://www.sno.phy.queensu.ca/~phil/exiftool/Image-ExifTool-11.77.tar.gz
+  - tar -zxvf Image-ExifTool-11.77.tar.gz
+  - cd Image-ExifTool-11.77 && perl Makefile.PL && make test && sudo make install
+  - cd .. && rm -rf Image-ExifTool-11.77
+  # create db for postgresql
+  - psql -c 'create database homestead_test;' -U postgres
+  # create db for mariadb
+  - mysql -e 'create database homestead_test;'
+  # composer stuff
+  - composer self-update
+  - sh -c "if [ '$TRAVIS_COMPOSER_DEV' = 'yes' ] ; then composer install --no-interaction ; fi"
+  - sh -c "if [ '$TRAVIS_COMPOSER_DEV' = 'no' ] ; then composer install --no-interaction --no-dev ; fi"
+
+script:
+  - sh -c "if [ '$TRAVIS_COMPOSER_DEV' = 'yes' ] ; then vendor/bin/php-cs-fixer fix --config=.php_cs --verbose --diff --dry-run ; fi"
+  # test mariadb
+  - cp .env.mariadb.travis .env
+  - php artisan key:generate
+  - php artisan migrate
+  - sh -c "if [ '$TRAVIS_COMPOSER_DEV' = 'yes' ] ; then vendor/bin/phpunit --verbose; fi"
+  - php artisan migrate:rollback
+  # test postgresql
+  - cp .env.postgresql.travis .env
+  - php artisan key:generate
+  - php artisan migrate
+  - sh -c "if [ '$TRAVIS_COMPOSER_DEV' = 'yes' ] ; then vendor/bin/phpunit --verbose ; fi"
+  - php artisan migrate:rollback
+
+after_success:
+  - sh -c "if [ '$TRAVIS_COMPOSER_DEV' = 'yes' ] ; then bash codecov.sh ; fi"
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/c96e902d9f1fe0faeacc
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always

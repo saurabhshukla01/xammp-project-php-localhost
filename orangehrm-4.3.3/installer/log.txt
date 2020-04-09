@@ -1,0 +1,50 @@
+Client Info
+
+User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.75 Safari/537.36
+Remote Address : ::1
+
+Server Info
+
+Host : localhost
+PHP Version : 7.2.22
+Server : Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.2.22
+Admin : postmaster@localhost
+
+Document Root : C:/xampp/htdocs
+ROOT_PATH : C:\xampp\htdocs\orangehrm-4.3.3
+
+OrangeHRM Installation Log
+
+Mon, 23 Sep 2019 17:59:23 +0200 DB Creation - Starting
+Mon, 23 Sep 2019 17:59:23 +0200 DB Creation - Done
+Mon, 23 Sep 2019 17:59:23 +0200 DB Creation - No Errors
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - Starting
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - Connected to the DB Server
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - Selected the DB
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - Reading DB Script
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - Opened DB Script
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - Read DB script
+Mon, 23 Sep 2019 17:59:25 +0200 Fill Data Phase 1 - There are 288 Statements in the DB script
+Mon, 23 Sep 2019 17:59:33 +0200 MySQL Procedure Error:No database selected
+Mon, 23 Sep 2019 17:59:33 +0200 Fill Data Phase 1 - Done
+Mon, 23 Sep 2019 17:59:33 +0200 Fill Data Phase 1 - No Errors
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - Starting
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - Connected to the DB Server
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - Selected the DB
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - Reading DB Script
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - Opened DB Script
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - Read DB script
+Mon, 23 Sep 2019 17:59:35 +0200 Fill Data Phase 2 - There are 167 Statements in the DB script
+Mon, 23 Sep 2019 17:59:36 +0200 MySQL Event Error:No database selected
+Mon, 23 Sep 2019 17:59:36 +0200 Fill Data Phase 1 - Connected to the DB Server
+Mon, 23 Sep 2019 17:59:36 +0200 Fill Data Phase 2 - Done
+Mon, 23 Sep 2019 17:59:36 +0200 Fill Data Phase 2 - No Errors
+Mon, 23 Sep 2019 17:59:38 +0200 Create DB user - Starting
+Mon, 23 Sep 2019 17:59:38 +0200 Create DB user - Done
+Mon, 23 Sep 2019 17:59:38 +0200 Create DB user - No Errors
+Mon, 23 Sep 2019 17:59:41 +0200 Create OrangeHRM user - Starting
+Mon, 23 Sep 2019 17:59:41 +0200 Create OrangeHRM user - Done
+Mon, 23 Sep 2019 17:59:41 +0200 Create OrangeHRM user - No Errors
+Mon, 23 Sep 2019 17:59:43 +0200 Write Conf - Starting
+Mon, 23 Sep 2019 17:59:43 +0200 Write Conf - Done
+Mon, 23 Sep 2019 17:59:43 +0200 Write Conf - No Errors

@@ -1,0 +1,191 @@
+
+.skull_select {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  margin: 0px 0px;
+}
+
+.skull_select select {
+  position: absolute;
+  z-index: 8;
+  height: 40px;
+  cursor: pointer;
+  width: 100%;
+  padding-left: 10px;
+  background-color: rgba(0,0,0,0.4);
+  border: 1px solid #4b5263;
+  border-radius: 0px;
+  display: inline-block;
+  color: #4e5f6f;
+  display: block;
+  -webkit-appearance: none;
+}
+
+.skull_select .skull_select_mask {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.skull_select:after {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  content: "";
+  top: 14px;
+  right: 12px;
+  height: 8px;
+  width: 8px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  border-top: rgba(255, 255, 255, 0.50) 1px solid;
+  border-left: rgba(255, 255, 255, 0.50) 1px solid;
+}
+
+#skull_mask {
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.skull_list {
+  position: absolute;
+  padding: 15px;
+  width: 90%;
+  height: 90%;
+  background: #fff;;
+  overflow-y: auto;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+.skull_list ul, .skull_list li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skull_list li {
+  padding: 15px;
+  background: #ffffff;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  border: 1px #eee solid;
+}
+.skull_list::-webkit-scrollbar {
+  display: none;
+}
+
+.skull_list {
+  -ms-overflow-style: none;
+}
+.skull_list li label { display: block;
+  cursor: pointer; position: absolute; bottom: 0px; width: 90%; }
+
+  .skull_list li label span {border: 1px #000 solid;}
+
+.skull_list li label .icon {
+  display: inline-block;
+ *display: inline;
+ *zoom: 1;
+  cursor: pointer;
+}
+
+.skull_list li label .icon_radio {
+  float: right;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: #d1d1d5 1px solid;
+  border-radius: 50%;
+  outline: none;
+  margin-right: 5px;
+}
+
+.skull_list li.checked { background: #01d9b4; }
+
+.skull_list li.checked .icon_radio {
+  width: 20px;
+  height: 20px;
+  background: #1a98e1;
+  border: #1a98e1 1px solid;
+  border-radius: 50%;
+}
+
+.skull_list li.checked .icon_radio:after {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  content: "";
+  top: 2px;
+  left: 6px;
+  height: 10px;
+  width: 5px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  border-top: #fff 1px solid;
+  border-left: #fff 1px solid;
+}
+
+.skull_list li:active { background: rgba(0, 0, 0, 0.025); }
+
+.skull_list li:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.skull_list li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.skull_list ::-webkit-scrollbar {
+ width: 3px;
+ margin-right: 2px;
+}
+.skull_list ::-webkit-scrollbar:horizontal {
+ height: 3px;
+ margin-bottom: 2px;
+}
+.skull_list ::-webkit-scrollbar-track {
+ border-radius: 2px;
+}
+.skull_list ::-webkit-scrollbar-track-piece {
+ background-color: #fff;
+ border-radius: 2px;
+}
+.skull_list ::-webkit-scrollbar-thumb {
+ width: 2px;
+ border-radius: 2px;
+ background: rgba(0, 0, 0, 0.25);
+}
+.skull_list ::-webkit-scrollbar-thumb:hover {
+ background: rgba(0, 0, 0, 0.25);
+}
+
+
+.skull_list li:nth-child(1) {background: url('../images/short-banner.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px;pointer-events: none; }
+.skull_list li:nth-child(2) {background: url('../images/short-banner1.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
+.skull_list li:nth-child(3) {background: url('../images/short-banner2.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
+.skull_list li:nth-child(4) {background: url('../images/short-banner3.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
+.skull_list li:nth-child(5) {background: url('../images/short-banner4.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
+.skull_list li:nth-child(6) {background: url('../images/short-banner5.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
+.skull_list li:nth-child(7) {background: url('../images/short-banner6.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
+.skull_list li:nth-child(8) {background: url('../images/short-banner7.png'); background-size: 80%; background-repeat: no-repeat;background-position: center 35px; }
